@@ -1,14 +1,11 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
-package miservlet;
-
 /**
  *
- * @author Rockberto
+ * @author Roberto Eder Weiss Juárez
+ * @see {@link http://webxico.blogspot.mx/}
  */
+
+package mx.blogspot.webxico.servlet;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Random;
@@ -23,11 +20,13 @@ public class AhorcadoServlet extends HttpServlet
   //Las palabras disponibles para jugar
 private static final String[] PALABRAS= {"GATO","CAPILLA","BABOR","MURCIELAGO","VENTANAL","HAMACA","SEXY","NIRVANA"};
 
+@Override
 protected void doGet(HttpServletRequest req,HttpServletResponse res) throws ServletException, IOException
 {
   doPost(req,res);
 }
 
+@Override
 protected void doPost(HttpServletRequest req,HttpServletResponse res) throws ServletException, IOException
 {
     HttpSession sesion = req.getSession();
